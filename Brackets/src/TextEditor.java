@@ -20,8 +20,23 @@ public class TextEditor {
 	Scanner scan = new Scanner(System.in);
 	
 	public TextEditor() {
-	    System.out.print("Please enter in a string with brackets: ");
-	    input = scan.nextLine();
+	    System.out.print("Please enter in a string with brackets or hit q to quit: ");
+	    String result = scan.nextLine();
+	    
+	    if(result.equals("q")){
+	    	System.out.printf("\nProcess finished with exit code 0");
+    		System.exit(0);
+	    }
+	    
+	    while(result.contains("(") == false && result.contains(")") == false && result.contains("[") == false 
+	    		&& result.contains("]") == false && result.contains("{") == false && result.contains("}") == false) {
+	    	
+	    	System.out.print("No brackets detected. Please enter in a string with brackets or hit q to quit: ");
+	    	result = scan.nextLine();
+	    }
+	    
+	    input = result;
+	    
 	}
 	
 	
@@ -211,13 +226,9 @@ public class TextEditor {
 		do {
 			 TextEditor test = new TextEditor();
 			 test.isSuccess();
-		}while(true);
-       
-        
-       
-        
+		}while(true);   
 	}
-
 }
+
 
 
