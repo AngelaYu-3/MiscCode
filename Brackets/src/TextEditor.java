@@ -28,13 +28,14 @@ public class TextEditor {
     		System.exit(0);
 	    }
 	    
-	    while(result.contains("(") == false && result.contains(")") == false && result.contains("[") == false 
-	    		&& result.contains("]") == false && result.contains("{") == false && result.contains("}") == false) {
+	    //!result.contains("(") is the same as result.contains("(") == false
+	    while(!result.contains("(") && !result.contains(")") && !result.contains("[")
+	    		&& !result.contains("]") && !result.contains("{") && !result.contains("}")) {	
 	    	
 	    	System.out.print("No brackets detected. Please enter in a string with brackets or hit q to quit: ");
 	    	result = scan.nextLine();
 	    }
-	    
+	   
 	    input = result;
 	    
 	}
