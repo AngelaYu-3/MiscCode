@@ -1,4 +1,3 @@
-
 public class Bracket {
 	int type; //0:( 1: [ 2: {
 	int index;
