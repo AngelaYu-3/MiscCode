@@ -2,20 +2,16 @@
 public class test {
 	
 	
-	public int[] pre4(int[] nums) {
-		int i = 0;
-		
-		
-		while(nums[i] !=4) {
-			i++;
+	public void pre4(int[] nums) {
+	
+		for(int index = 0; index < nums.length; index++) {
+			
+			if(nums[index] == 4) {
+			break;
+			}
+			System.out.print(nums[index]);
 		}
-		
-		int[] foo = new int[i];
-		for(int index = 0; index < i; index++) {
-			foo[index] = nums[index];
-			System.out.print(foo[index]);
-		}
-		return foo;
+	
 	}
 	
 	public static void main(String[] args) {
