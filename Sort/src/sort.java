@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class selectionSort {
+public class sort {
 	Scanner in = new Scanner(System.in);
 	String[] values;
 	int[] array;
 	int i = 0;
 	
-	public selectionSort() {
+	public sort() {
 		System.out.print("Please enter in a list of integers separated by commas only or q to quit: ");
 		String input = in.nextLine();
 		String regex = "[\\d, /, /-]+"; //used to see if "0-9" and "," are only present in input
@@ -37,7 +37,7 @@ public class selectionSort {
 	}
 	
 	//selectionSort logic
-	public void sort() {	    
+	public void selectionSort() {	    
 		
 		for(int i = 0; i < array.length - 1; i++) {
 			                                                   
@@ -53,17 +53,35 @@ public class selectionSort {
 			array[i] = array[minIndex];
 			array[minIndex] = temp;
 		}
-		
-		System.out.println(Arrays.toString(array));
+		System.out.print("Selection Sort: " + Arrays.toString(array) + " ");
 	}
 
+	
+	//insertionSort logic
+	public void insertionSort() {
+	    for(int i = 1; i < array.length; i++) {
+	    	
+	    	int temp = array[i];
+	    	int possibleIndex = i;
+	    	
+	    	while(possibleIndex > 0 && temp < array[possibleIndex - 1]) {
+	    		array[possibleIndex] = array[possibleIndex - 1];
+	    		possibleIndex--;
+	    	}
+	    	
+	    	array[possibleIndex] = temp;
+	    }
+	    System.out.println("Insertion Sort: " + Arrays.toString(array) + " ");
+	    System.out.println();
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		do{
-			selectionSort test = new selectionSort();
-			test.sort();
+			sort test = new sort();
+			test.selectionSort();
+			test.insertionSort();
 		}while(true);
 	}
 
