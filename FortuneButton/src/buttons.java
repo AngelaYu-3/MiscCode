@@ -1,3 +1,14 @@
+
+/**
+ * FortuneButton 
+ * Played around with basic GUI and used ActionListener with buttons.
+ * Matches clicks with either a happy or sad face.
+ * 
+ * @author Angela Yu
+ * 
+ * @date April 9, 2020
+ */
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
