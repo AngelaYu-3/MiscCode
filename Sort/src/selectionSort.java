@@ -19,7 +19,7 @@ public class selectionSort {
 	int i = 0;
 	
 	public selectionSort() {
-		System.out.print("Please enter in a list of integers separated by commas only or q to quit: ");
+		System.out.print("Please enter in a list of integers separated by commas only or enter q to quit: ");
 		String input = in.nextLine();
 		String regex = "[\\d, /, /-]+"; //used to see if "0-9" and "," are only present in input
 		
@@ -33,7 +33,7 @@ public class selectionSort {
 				System.exit(0);
 				//break;
 			}
-			System.out.print("Please enter in a list of integers separated by commas only or q to quit: ");
+			System.out.print("Please enter in a list of integers separated by commas only or enter q to quit: ");
 			input = in.nextLine();
 		}
 		
