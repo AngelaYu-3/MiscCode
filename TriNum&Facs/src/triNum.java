@@ -1,8 +1,8 @@
 /**
  * TriNum&Facs
  * This program uses recursion to find both the triangular number
- * and factorial of a passed-in integer. It prints out the process
- * of recursion for both operations.
+ * and factorial of a passed-in integer. It prints out the recursion process
+ * for both operations.
  * 
  * @date June 11, 2020
  */
