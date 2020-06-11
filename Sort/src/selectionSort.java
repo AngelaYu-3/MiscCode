@@ -3,8 +3,6 @@
  * This program takes a string of numbers separated by commas from the user and
  * sorts the numbers in ascending order using selection, insertion, and merge sort algorithms.
  * 
- * @author Angela Yu
- * 
  *  @date April 9, 2020
  */
 
