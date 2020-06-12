@@ -13,11 +13,19 @@ import java.util.Scanner;
 public class selectionSort {
 	Scanner in = new Scanner(System.in);
 	String[] values;
-	int[] array;
+	static int[] array;
 	int i = 0;
 	
+	
+	/**
+	 * passes in string from user with only integers and commas
+	 * prompts user for another string if invalid string (not only integers and commas)
+	 * changes string to array of integers (no commas)
+	 * offers option to quit with "Q" or "q"
+	 */
+	
 	public selectionSort() {
-		System.out.print("Please enter in a list of integers separated by commas only or enter q to quit: ");
+		System.out.print("\nPlease enter in a list of integers separated by commas only or enter q to quit: ");
 		String input = in.nextLine();
 		String regex = "[\\d, /, /-]+"; //used to see if "0-9" and "," are only present in input
 		
@@ -44,7 +52,9 @@ public class selectionSort {
 		//System.out.print(Arrays.toString(array));
 	}
 	
-	//selectionSort logic
+	/**
+	 * selectionSort logic
+	 */
 	public void sort() {	    
         
 		for(int i = 0; i < array.length - 1; i++) {		
@@ -62,7 +72,7 @@ public class selectionSort {
 			array[minIndex] = temp;
 		}
 		
-		System.out.println(Arrays.toString(array));
+		System.out.println("Selection Sort: " + Arrays.toString(array));
 	}
 	
 	public static void main(String[] args) {
@@ -74,8 +84,8 @@ public class selectionSort {
 			mergeSort sort3 = new mergeSort();
 			
 			sort1.sort();
-			sort2.sort();
-			sort3.sort();
+			sort2.sort(array);
+			System.out.println("Selection Sort: " + Arrays.toString(sort3.merge(array)));
 			
 		}while(true);
 	}
