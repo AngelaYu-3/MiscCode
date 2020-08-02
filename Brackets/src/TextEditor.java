@@ -95,7 +95,7 @@ public class TextEditor {
 		    }
 		    else {
 		    	int x = Brackets.firstElement().index;
-		    	System.out.println("Error at: " + x);
+		    	System.out.println("Error at: " + (x + 1));
 		    }	
 	    }
 	    
